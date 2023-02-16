@@ -15,6 +15,14 @@ int sum(int arr[], int size) {
     return sum;
 }
 
+int prod(int arr[], int size) {
+    int prod = 1;
+    for (int i = 0; i < size; i++) {
+        prod = prod * arr[i];
+    }
+    return prod;
+}
+
 int main(void)
 {
     return 0;
