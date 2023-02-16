@@ -6,6 +6,8 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
+
 
 int sum(int arr[], int size) {
     int sum = 0;
@@ -21,6 +23,14 @@ int prod(int arr[], int size) {
         prod = prod * arr[i];
     }
     return prod;
+}
+
+int* reverser(int arr[], int size) {
+    int* reversearr = (int*) malloc(size * sizeof(int));
+    for (int i = 0; i < size; i++) {
+        reversearr[i] = arr[size - i - 1];
+    }
+    return reversearr;
 }
 
 int main(void)
