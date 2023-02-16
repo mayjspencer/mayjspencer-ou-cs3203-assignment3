@@ -25,5 +25,11 @@ int prod(int arr[], int size) {
 
 int main(void)
 {
+    int arr[] = {1, 2, 3, 4, 5};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int sum_total = sum(arr, size);
+    int prod_total = prod(arr, size);
+    printf("The sum of the elements in array is %d\n", sum_total);
+    printf("The product of the elements in array is %d\n", prod_total);
     return 0;
 }
