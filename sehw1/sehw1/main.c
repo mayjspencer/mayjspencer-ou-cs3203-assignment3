@@ -35,11 +35,24 @@ int* reverser(int arr[], int size) {
 
 int main(void)
 {
-    int arr[] = {1, 2, 3, 4, 5};
-    int size = sizeof(arr) / sizeof(arr[0]);
+    int size;
+    printf("Enter the size of the array: ");
+    scanf("%d", &size);
+
+    int* arr = (int*) malloc(size * sizeof(int));
+    printf("Enter the elements of the array: ");
+    for (int i = 0; i < size; i++) {
+        scanf("%d", &arr[i]);
+    }
     int sum_total = sum(arr, size);
     int prod_total = prod(arr, size);
+    int* reversearr = reverser(arr, size);
     printf("The sum of the elements in array is %d\n", sum_total);
     printf("The product of the elements in array is %d\n", prod_total);
+    printf("The reverse of the array is: ");
+       for (int i = 0; i < size; i++) {
+           printf("%d ", reversearr[i]);
+       }
+       free(reversearr);
     return 0;
 }
